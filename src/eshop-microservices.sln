@@ -5,7 +5,7 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{38BA6013-65BC-4667-88F2-3C1A3A39ACB6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{79163BC0-E54D-4370-A43D-A38CB71DAF84}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{3F2447DC-CFA9-46D2-8731-79C8632344FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +17,10 @@ Global
 		{38BA6013-65BC-4667-88F2-3C1A3A39ACB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38BA6013-65BC-4667-88F2-3C1A3A39ACB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38BA6013-65BC-4667-88F2-3C1A3A39ACB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
