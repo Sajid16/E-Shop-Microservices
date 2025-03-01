@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35027.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Catalog.API", "Services\Catalog\Catalog.API\Catalog.API.csproj", "{38BA6013-65BC-4667-88F2-3C1A3A39ACB6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{3F2447DC-CFA9-46D2-8731-79C8632344FD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuildingBlocks", "BuildingBlocks\BuildingBlocks\BuildingBlocks.csproj", "{3F2447DC-CFA9-46D2-8731-79C8632344FD}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{EC010322-A3BB-4440-9CEE-625F2FB951FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3F2447DC-CFA9-46D2-8731-79C8632344FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC010322-A3BB-4440-9CEE-625F2FB951FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC010322-A3BB-4440-9CEE-625F2FB951FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC010322-A3BB-4440-9CEE-625F2FB951FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC010322-A3BB-4440-9CEE-625F2FB951FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

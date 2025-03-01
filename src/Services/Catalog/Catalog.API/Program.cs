@@ -7,6 +7,10 @@ builder.Services.AddMediatR(config =>
 {
     config.RegisterServicesFromAssembly(assembly);
 });
+builder.Services.AddMarten(options =>
+{
+    options.Connection(builder.Configuration.GetConnectionString("Databse")!);
+}).UseLightweightSessions();
 
 builder.Services.AddCarter();
 

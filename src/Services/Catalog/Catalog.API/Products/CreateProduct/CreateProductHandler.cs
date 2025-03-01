@@ -1,12 +1,12 @@
-﻿using BuildingBlocks.CQRS;
-using Catalog.API.Models;
-
-namespace Catalog.API.Products.CreateProduct
+﻿namespace Catalog.API.Products.CreateProduct
 {
     public record CreateProductCommand(string Name, List<string> Category, string Description, string ImageFile, decimal Price)
     : ICommand<CreateProductResult>;
     public record CreateProductResult(Guid Id);
-    public class CreateProductCommandHandler : ICommandHandler<CreateProductCommand, CreateProductResult>
+
+    // here IDocumentSession is coming from marten library that contacts with Postgre SQL.
+    // instead of creating primary constructor sending the params inside class declaration that will work as same since there is no dependency related to passing arguments
+    public class CreateProductCommandHandler(IDocumentSession documentSession) : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
         public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
@@ -24,6 +24,11 @@ namespace Catalog.API.Products.CreateProduct
                 Name = command.Name
             };
 
+            // save into database
+            documentSession.Store(product);
+            await documentSession.SaveChangesAsync(cancellationToken);
+
+            // return the result
             return new CreateProductResult(product.Id);
         }
     }

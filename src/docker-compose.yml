@@ -1,0 +1,15 @@
+version: '3.4'
+
+# inside docker-compose.yml file we have to declare all the image names and additional services
+# the configurations related information will be kept inside docker-compose.overrider.yml file
+
+services:
+  catalogdb:
+    image: postgres
+
+volumes:
+  postgres_catalog:    
+      
+  
+
+
