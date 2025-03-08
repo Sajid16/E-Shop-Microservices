@@ -21,7 +21,6 @@
     <Folder Include="Products\DeleteProduct\" />
     <Folder Include="Products\UpdateProduct\" />
     <Folder Include="Products\GetProductByCategory\" />
-    <Folder Include="Products\GetProductById\" />
   </ItemGroup>
 
   <ItemGroup>
