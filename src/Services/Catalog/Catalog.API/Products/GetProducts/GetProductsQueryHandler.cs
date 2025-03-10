@@ -7,7 +7,7 @@
     {
         public async Task<GetProductsResult> Handle(GetProductsQuery query, CancellationToken cancellationToken)
         {
-            var products = await documentSession.Query<Product>().ToListAsync();
+            var products = await documentSession.Query<Product>().ToListAsync(cancellationToken);
             return new GetProductsResult(products);
         }
     }
