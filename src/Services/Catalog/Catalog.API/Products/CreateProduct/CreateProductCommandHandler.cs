@@ -6,7 +6,7 @@
 
     // here IDocumentSession is coming from marten library that contacts with Postgre SQL.
     // instead of creating primary constructor sending the params inside class declaration that will work as same since there is no dependency related to passing arguments
-    public class CreateProductCommandHandler(IDocumentSession documentSession) : ICommandHandler<CreateProductCommand, CreateProductResult>
+    internal class CreateProductCommandHandler(IDocumentSession documentSession) : ICommandHandler<CreateProductCommand, CreateProductResult>
     {
         public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
         {
