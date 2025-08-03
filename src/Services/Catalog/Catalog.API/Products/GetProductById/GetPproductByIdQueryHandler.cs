@@ -7,7 +7,7 @@
         public async Task<GetProductByIdResult> Handle(GetProductByIdQuery query, CancellationToken cancellationToken)
         {
             var product = await documentSession.LoadAsync<Product>(query.ProductId, cancellationToken);
-            if (product is null) throw new ProductNotFoundException();
+            if (product is null) throw new ProductNotFoundException(query.ProductId);
             return new GetProductByIdResult(product);
         }
     }

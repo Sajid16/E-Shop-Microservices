@@ -1,4 +1,5 @@
 using BuildingBlocks.Behaviors;
+using BuildingBlocks.Exceptions.Handler;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,7 +21,15 @@ builder.Services.AddMarten(options =>
 
 builder.Services.AddCarter();
 
+#region for custom exception handler
+builder.Services.AddExceptionHandler<CustomExceptionHandler>();
+#endregion
+
 var app = builder.Build();
+
+#region for custom exception handler
+app.UseExceptionHandler(options => { });
+#endregion
 
 // Configure the HTTP request pipeline
 
